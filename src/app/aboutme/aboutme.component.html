@@ -1,3 +1,12 @@
-<p>
-  aboutme works!
-</p>
+<main data-infinite-scroll
+debounce
+[infiniteScrollDistance]="mss.scrollDistance"
+[infiniteScrollUpDistance]="mss.scrollUpDistance"
+[infiniteScrollThrottle]="mss.throttle"
+(scrolled)="mss.onScrollDown()"
+(scrolledUp)="mss.onScrollUp()">
+  <div class="boundbox">
+    aboutme works!
+  </div>
+
+</main> 

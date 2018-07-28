@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+main{
+    height: 500vh;
+}
+
+.boundbox{
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+}
+
+.boundbox > p::after {
+    content: '{{ mss.scrollUpDistance }}';
+    
+}

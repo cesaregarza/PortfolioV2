@@ -9,6 +9,8 @@ import { SkillspageComponent } from './skillspage/skillspage.component';
 import { HobbiespageComponent } from './hobbiespage/hobbiespage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll-extended/dist';
+import * as $ from 'jquery/dist/jQuery';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

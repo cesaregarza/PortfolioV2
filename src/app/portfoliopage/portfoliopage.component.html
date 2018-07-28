@@ -1,3 +1,11 @@
-<p>
-  portfoliopage works!
-</p>
+<main data-infinite-scroll
+debounce
+[infiniteScrollDistance]="mss.scrollDistance"
+[infiniteScrollUpDistance]="mss.scrollUpDistance"
+[infiniteScrollThrottle]="mss.throttle"
+(scrolled)="mss.onScrollDown()"
+(scrolledUp)="mss.onScrollUp()">
+  <div class="boundbox">
+    portfoliopage works!
+  </div>
+</main>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MasterServiceService } from '../master-service.service';
 
 @Component({
   selector: 'app-portfoliopage',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfoliopageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mss: MasterServiceService) {
+    this.mss = mss;
+   }
 
   ngOnInit() {
   }

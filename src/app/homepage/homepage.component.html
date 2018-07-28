@@ -1,3 +1,10 @@
-<p>
-  homepage works!
-</p>
+<main infiniteScroll
+[infiniteScrollDistance]="mss.scrollDistance"
+[infiniteScrollUpDistance]="mss.scrollUpDistance"
+[infiniteScrollThrottle]="mss.throttle"
+(scrolled)="mss.onScrollDown()"
+(scrolledUp)="mss.onScrollUp()">
+  <div class="boundbox">
+    homepage works!
+  </div>
+</main>  
