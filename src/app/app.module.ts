@@ -13,6 +13,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll-extended/dist';
 import * as $ from 'jquery/dist/jQuery';
 import 'jquery.nicescroll';
+import 'lethargy';
 
 @NgModule({
   declarations: [

@@ -14,7 +14,8 @@
     ],
     "types": [
       "jQuery",
-      "@types/jquery.nicescroll"
+      "@types/jquery.nicescroll",
+      "lethargy/lethargy.js.d.ts"
     ],
     "lib": [
       "es2017",

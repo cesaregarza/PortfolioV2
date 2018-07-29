@@ -2,6 +2,7 @@ import { Injectable, AfterViewInit, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import 'jquery.nicescroll';
+import 'lethargy';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import 'jquery.nicescroll';
 export class MasterServiceService {
 
   whenCalled(){
+    $('html').on("mousewheel", function(e){ e.preventDefault(); });
     $('body').niceScroll({
       cursorcolor: "#424242", // change cursor color in hex
       cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
@@ -73,6 +75,7 @@ export class MasterServiceService {
   currentpage = this.pages[0];
   maxpages = this.pages.length;
   winHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.1;
+  lethargy = new this.lethargy();
 
 
   constructor(private router: Router) {
@@ -83,6 +86,7 @@ export class MasterServiceService {
      console.log(`scrolled down!`);
      let nxt = (this.currentpage.id % this.maxpages);
      let next = this.pages[nxt];
+     $('html').on("mousewheel", function(e){ e.preventDefault(); });
      $("body").getNiceScroll().doScrollPos(0, this.winHeight / 2, 999999);
      this.router.navigate([next.page])
      this.currentpage = this.pages[nxt];
@@ -93,6 +97,8 @@ export class MasterServiceService {
      console.log(`scrolled up!`);
      let prv = ((this.currentpage.id + this.maxpages - 2) % this.maxpages);
      let prev = this.pages[prv];
+     $('html').on("mousewheel", function(e){ e.preventDefault(); });
+     $('body').css("overflow", "hidden");
      $("body").getNiceScroll().doScrollPos(0, this.winHeight / 2, 999999);
      this.router.navigate([prev.page]);
      this.currentpage = this.pages[prv];
