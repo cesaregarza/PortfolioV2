@@ -13,6 +13,7 @@ export class PortfoliopageComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.mss.whenCalled();
   }
 
 }

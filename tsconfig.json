@@ -13,7 +13,8 @@
       "node_modules/@types"
     ],
     "types": [
-      "jQuery"
+      "jQuery",
+      "@types/jquery.nicescroll"
     ],
     "lib": [
       "es2017",

@@ -13,6 +13,7 @@ export class HobbiespageComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.mss.whenCalled();
   }
 
 }

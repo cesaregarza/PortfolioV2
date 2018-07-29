@@ -1,3 +1,4 @@
+/// <reference types="@types/jquery.nicescroll" />
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,7 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll-extended/dist';
 import * as $ from 'jquery/dist/jQuery';
+import 'jquery.nicescroll';
 
 @NgModule({
   declarations: [

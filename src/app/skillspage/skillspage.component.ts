@@ -13,6 +13,7 @@ export class SkillspageComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.mss.whenCalled();
   }
 
 }

@@ -13,6 +13,7 @@ export class ContactpageComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.mss.whenCalled();
   }
 
 }

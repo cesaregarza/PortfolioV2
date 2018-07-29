@@ -12,7 +12,9 @@ export class HomepageComponent implements OnInit {
     this.mss = mss;
    }
 
-  ngOnInit() {
+   ngOnInit(){
+    this.mss.whenCalled();
+    console.log("init!");
   }
 
 }

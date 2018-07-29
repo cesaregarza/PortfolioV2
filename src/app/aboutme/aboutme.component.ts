@@ -13,6 +13,7 @@ export class AboutmeComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.mss.whenCalled();
   }
 
 }

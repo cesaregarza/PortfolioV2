@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free": "^5.2.0",
     "@types/jquery": "^3.3.5",
+    "@types/jquery.nicescroll": "^3.7.0",
     "bootstrap": "^4.1.2",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
