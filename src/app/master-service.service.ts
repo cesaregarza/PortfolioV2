@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import 'jquery.nicescroll';
 import 'lethargy';
+import { Lethargy } from 'lethargy';
 
 @Injectable({
   providedIn: 'root'
@@ -75,7 +76,7 @@ export class MasterServiceService {
   currentpage = this.pages[0];
   maxpages = this.pages.length;
   winHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.1;
-  lethargy = new this.lethargy();
+  lethargy = new Lethargy();
 
 
   constructor(private router: Router) {
@@ -87,7 +88,9 @@ export class MasterServiceService {
      let nxt = (this.currentpage.id % this.maxpages);
      let next = this.pages[nxt];
      $('html').on("mousewheel", function(e){ e.preventDefault(); });
-     $("body").getNiceScroll().doScrollPos(0, this.winHeight / 2, 999999);
+     if (this.lethargy.check("mousewheel") != false){
+       $("body").getNiceScroll().doScrollPos(0, this.winHeight / 2, 999999);
+     }
      this.router.navigate([next.page])
      this.currentpage = this.pages[nxt];
      this.direction = "down";
